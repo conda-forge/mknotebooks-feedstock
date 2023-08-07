@@ -1,4 +1,4 @@
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: mknotebooks
@@ -7,7 +7,7 @@ package:
 source:
   # sdist not published to pypi
   url: https://github.com/greenape/mknotebooks/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 641dcf1721f89844f418aeefc8cc6f49a7faaa1ac14383714750d40ab5b02c8a
+  sha256: c63f09358a63dc510544ef3bb7356bfe0f0fadf8a770160999b3dbe33ee12228
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/greenape/mknotebooks
-  summary: 'A plugin for mkdocs to help you include Jupyter notebooks in your projects'
+  summary: A plugin for mkdocs to help you include Jupyter notebooks in your projects
   license: MIT
   license_file: LICENSE
 
