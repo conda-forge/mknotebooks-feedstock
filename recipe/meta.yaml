@@ -11,15 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - nbconvert >=6.0.0
     - mkdocs >=1.5.0
     - markdown >=3.3.3
@@ -30,6 +31,7 @@ test:
     - mknotebooks
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
